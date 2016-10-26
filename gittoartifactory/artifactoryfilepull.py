@@ -1,7 +1,7 @@
 
 
 
-def pullfiletoartifactory(*args, **kwargs):
+def pullfilefromartifactory(*args, **kwargs):
     try:
         import requests
         import hashlib
