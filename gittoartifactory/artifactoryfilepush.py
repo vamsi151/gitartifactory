@@ -1,14 +1,14 @@
-
+import requests
+import hashlib
+import shutil
+import os
+import re
+import getpass
 
 
 
 def pushfiletoartifactory(*args, **kwargs):
-    import requests
-    import hashlib
-    import shutil
-    import os
-    import re
-    import getpass
+
 
     artifactory_url = raw_input("User Please Enter Artifactory URL : ")
 
