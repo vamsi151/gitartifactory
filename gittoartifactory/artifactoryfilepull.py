@@ -1,17 +1,15 @@
 
-
+import requests
+import hashlib
+import shutil
+import os
+import re
+import getpass
+from sys import platform
 
 def pullfilefromartifactory(*args, **kwargs):
     try:
-        import requests
-        import hashlib
-        import shutil
-        import os
-        import re
-        import getpass
-        from sys import platform
-
-
+        
         artifactory_url = raw_input("User Please Enter Artifactory URL : ")
 
         #artifactory_url = "http://153.64.146.90:8080/artifactory/OSAT-STABLE/Test2/svn2git"       # your artifactory instance
