@@ -35,6 +35,8 @@ def pushfiletoartifactory(*args, **kwargs):
                'X-Checksum-Md5': hashlib.md5(open(filelocation).read()).hexdigest(),
                'X-Checksum-Sha1': md5_checksum}
 
+    
+    print ("File transferring to location file {} in Progress......".format(upload_url))
     # pushing file data to Artifactory
 
     with open(filelocation, 'rb') as f:
