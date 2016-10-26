@@ -36,7 +36,7 @@ def pushfiletoartifactory(*args, **kwargs):
                'X-Checksum-Sha1': md5_checksum}
 
     
-    print ("File transferring to location file {} in Progress......".format(upload_url))
+    print ("File transferring to location {} is in Progress......".format(upload_url))
     # pushing file data to Artifactory
 
     with open(filelocation, 'rb') as f:
