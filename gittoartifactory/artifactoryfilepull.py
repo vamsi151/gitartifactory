@@ -30,7 +30,8 @@ def pullfilefromartifactory(*args, **kwargs):
             if len(drives) >= 1:
                 pathlocation = drives[0]
                 pathlocation = pathlocation + '/' + filename
-                print "*" * 50
+                print ("\n")
+                print ("*" * 50)
                 print " Downloading file at {} in Progress......".format(pathlocation)
                 with open(pathlocation, 'wb') as out_file:
                     shutil.copyfileobj(response.raw, out_file)
@@ -42,11 +43,12 @@ def pullfilefromartifactory(*args, **kwargs):
         else:
             pathlocation = os.path.expanduser("~")
             pathlocation = pathlocation + '/' + filename
-            print "*" * 50
-            print " Downloading file at {} in Progress......".format(pathlocation)
+            print ("\n")
+            print ("*" * 50)
+            print (" Downloading file at {} in Progress......".format(pathlocation))
             with open(pathlocation, 'wb') as out_file:
                 shutil.copyfileobj(response.raw, out_file)
-        print  "Succesfully Downloaded file.... User can check file under location {}".format(pathlocation)
+        print  ("Succesfully Downloaded file.... User can check file under location {}".format(pathlocation))
 
     except Exception, e:
         print ("something went wrong!!!!", e)
